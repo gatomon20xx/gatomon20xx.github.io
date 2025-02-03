@@ -1,0 +1,565 @@
+.admin {
+	padding: 4px;
+	border-radius: 4px;
+	background: green;
+	margin: 6px;
+	width: 200px;
+	display: inline-block;
+}
+.admin.protected {
+	background: red;
+}
+.admin INPUT[type="submit"] {
+	width: 100%;
+}
+.admin.protected INPUT[type="submit"] {
+	width: 90%;
+}
+
+
+.bbcode {
+	word-break: break-all;
+}
+.bbcode BLOCKQUOTE {
+	border: 1px solid black;
+	padding: 8px;
+	background: #DDD;
+}
+.bbcode .anchor A.alink {
+	visibility: hidden;
+}
+.bbcode .anchor:hover A.alink {
+	visibility: visible;
+}
+
+
+.comment {
+	text-align: left;
+	position: relative;
+	word-wrap: break-word;
+}
+.comment IMG {
+	max-width: 100%;
+}
+.comment .info {
+	visibility: hidden;
+	text-align: center;
+	padding: var(--block-padding);
+	background: var(--block);
+	border: 1px solid var(--block-border);
+	position: absolute;
+	top: 0;
+	left: -195px;
+	width: 180px;
+	z-index: 1;
+	box-shadow: 0 0 4px #000;
+	border-radius: 4px;
+}
+.comment:hover .info {
+	visibility: visible;
+}
+
+.comment_add TEXTAREA {
+	width: 100%;
+}
+.comment_add INPUT {
+	width: 100%;
+}
+
+#comment-list-recent .more {
+	display: block;
+	padding-top: 8px;
+}
+.comment_big_list {
+	display: flex;
+	gap: 1em;
+}
+.comment_big_list .thumb {
+	flex: 0;
+}
+.comment_big_list .comment_list {
+	flex: 1;
+	border-left: 1px solid var(--block-border);
+}
+.comment_big_list .comment {
+	margin-left: 0;
+}
+
+.command_example {
+	margin: 12pt;
+	padding-left: 16pt;
+}
+
+.command_example code {
+    padding:4pt;
+    border: dashed 2px black;
+    background: inherit;
+}
+
+.command_example p {
+    padding-left: 16pt;
+}
+
+@media (min-width: 750px) {
+    .command_example code {
+        display: table-cell;
+        width: 256px;
+    }
+
+    .command_example p {
+        display: table-cell;
+    }
+}
+
+SECTION#image-list {
+	box-shadow: none;
+}
+SECTION#image-list .blockbody {
+	background: none;
+	border: none;
+	padding: 0px;
+	text-align: left;
+}
+.shm-image-list {
+	display: grid;
+	grid-template-columns: repeat( auto-fill, calc(var(--thumb-width) + 42px) );
+	place-items: center;
+}
+.shm-image-list .thumb {
+	margin-bottom: 8px;
+}
+
+.setupblocks {
+	column-width: 400px;
+	column-gap: 1em;
+	max-width: 1200px;
+	margin: auto;
+}
+.setupblocks > .setupblock:first-of-type { margin-top: 0; }
+
+.setupblock {
+	break-inside: avoid;
+	text-align: center;
+}
+.setupblock TEXTAREA {
+	width: 100%;
+	font-size: 0.75rem;
+	resize: vertical;
+}
+
+.advanced_settings INPUT {
+	width: 100%;
+}
+
+#Setupmain {
+	box-shadow: none;
+}
+#Setupmain>.blockbody {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.setupblock .form {
+	width: 100%;
+}
+.setupblock .form TH {
+	font-weight: normal;
+}
+.setupsubmit {
+	margin-top: 1em;
+	padding: 1em;
+	width: 100%;
+}
+
+INPUT, TEXTAREA, SELECT, BUTTON {
+	box-sizing: border-box;
+	font-size: 1em;
+}
+
+TABLE.form {width: 300px;}
+TABLE.form.zebra {width: 100%;}
+
+TABLE.form TD, TABLE.form TH {vertical-align: middle;}
+TABLE.form TBODY TR TD {text-align: left;}
+TABLE.form TBODY TR TH {text-align: right; padding-right: 4px; width: 1%; white-space: nowrap;}
+TABLE.form TBODY TR.header TD,
+TABLE.form TBODY TR.header TH {text-align: center; width: auto;}
+TABLE.form TD + TH {padding-left: 8px;}
+TABLE.form INPUT:not([type="checkbox"]):not([type="radio"]),
+TABLE.form SELECT,
+TABLE.form TEXTAREA,
+TABLE.form BUTTON {width: 100%;}
+
+*[onclick],
+H3[class~="shm-toggler"] {
+	cursor: pointer;
+}
+
+#flash {
+	background: #FF7;
+	color: #444;
+	display: block;
+	padding: 8px;
+	margin: 8px;
+	border: 1px solid #882;
+}
+
+.tag {
+	overflow-wrap: anywhere;
+}
+TABLE#large_upload_form.form {
+	width: 100%;
+}
+
+.mini_upload INPUT {
+	width: 100%;
+}
+
+TABLE.form.image_info {
+	width: 550px;
+	max-width: 100%;
+}
+
+.image_info .edit {
+	display: block;
+}
+.image_info .view {
+	display: none;
+}
+
+.image_info.infomode-view .edit {
+	display: none;
+}
+.image_info.infomode-view .view {
+	display: block;
+}
+
+.image_info TEXTAREA {
+	min-width: 100%;
+	min-height: 3rem;
+}
+
+.post_controls FORM {
+	margin-bottom: 0.75em;
+}
+.post_controls FORM:last-child {
+	margin-bottom: 0;
+}
+:root {
+	color-scheme: light dark;
+
+	--page: #EEE;
+	--text: #000;
+	--link-default: #0000EE;
+	--link-visited: #551A8B;
+	
+	--title: #BBB;
+	--title-border: #AAA;
+	
+	--header: #CCC;
+	--header-border: #BBB;
+	
+	--block: #DDD;
+	--block-border: #CCC;
+
+	--zebra-border: #CCC;
+	--zebra-header: #DDD;
+	--zebra-odd: #EFEFEF;
+	--zebra-even: #E0E0E0;
+
+	--border-radius: 0.75rem;
+	--block-padding: 0.5rem;
+}
+  
+@media (prefers-color-scheme: dark) {
+	:root {
+		--page: #222;
+		--text: #CCC;
+		--link-default: #BBF;
+		--link-visited: #EAF;
+			
+		--title: #333;
+		--title-border: #555;
+		
+		--header: #444;
+		--header-border: #666;
+		
+		--block: #555;
+		--block-border: #777;
+	
+		--zebra-border: #777;
+		--zebra-header: #444;
+		--zebra-odd: #555;
+		--zebra-even: #666;
+	}	
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*                  things common to all pages                    *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+:root {
+	font-size: 14px;
+	font-family: sans-serif;
+}
+
+H1, H2, H3 {
+	margin: 0;
+	text-align: center;
+	word-break: break-all;
+	/* not sure why top-padding appears visually larger than other padding in headers...
+	reducing top-padding to compensate */
+	padding: calc(var(--block-padding) * 0.5) var(--block-padding) var(--block-padding) var(--block-padding);
+}
+
+BODY {
+	background: var(--page);
+	color: var(--text);
+	margin: 1rem;
+}
+BODY.layout-grid {
+	display: grid;
+	grid-template-columns: 15rem auto;
+	grid-gap: 1rem;
+}
+
+HEADER {
+	grid-column: 1 / 3;
+	grid-row: 1;
+}
+HEADER H1 {
+	max-height: 3rem;
+	overflow: hidden;
+	background: var(--title);
+	border: 1px solid var(--title-border);
+	border-radius: var(--border-radius);
+}
+HEADER H1 A {
+	color: var(--text);
+}
+
+SECTION {
+	margin-bottom: 1rem;
+	border-radius: var(--border-radius);
+}
+SECTION:last-child {
+	margin-bottom: 0;
+}
+SECTION>H3 {
+	background: var(--header);
+	border: 1px solid var(--header-border);
+}
+SECTION>:first-child {
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
+}
+SECTION>:last-child {
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+}
+SECTION>.blockbody {
+	background: var(--block);
+	border: 1px solid var(--block-border);
+	border-top: none;
+	padding: var(--block-padding);
+}
+H1, SECTION, FOOTER {
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+FOOTER {
+	grid-column: 1 / 3;
+	grid-row: 3;
+	clear: both;
+	font-size: 0.7rem;
+	text-align: center;
+	background: var(--title);
+	border: 1px solid var(--title-border);
+	border-radius: var(--border-radius);
+	padding: var(--block-padding);
+	margin-top: 0;
+}
+
+THEAD {
+	font-weight: bold;
+}
+TD {
+	vertical-align: top;
+	text-align: center;
+}
+
+TABLE.zebra {border-spacing: 0; border: 2px solid var(--zebra-border);}
+TABLE.zebra TD, TABLE.zebra TH {vertical-align: middle; padding: 4px;}
+TABLE.zebra THEAD {position: sticky;top: 0;}
+TABLE.zebra THEAD TR:last-child TD, TABLE.zebra TR:last-child THEAD TH {border-bottom: 2px solid var(--zebra-border);}
+TABLE.zebra TFOOT TR:first-child TD, TABLE.zebra TFOOT TR:first-child TH {border-top: 2px solid var(--zebra-border);}
+TABLE.zebra TR TD {border-bottom: 1px solid var(--zebra-header);}
+TABLE.zebra TR:nth-child(odd) {background: var(--zebra-odd);}
+TABLE.zebra TR:nth-child(even) {background: var(--zebra-even);}
+
+A {
+	text-decoration: none;
+	color: var(--link-default);
+}
+A:hover {
+	text-decoration: underline;
+}
+A:visited {
+	color: var(--link-visited);
+}
+
+UL {
+	text-align: left;
+}
+
+CODE {
+	background: #BBB;
+	font-size: 0.9rem;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*             the navigation bar, and all its blocks             *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+NAV {
+	grid-column: 1;
+	grid-row: 2;
+	text-align: center;
+}
+NAV .blockbody {
+	font-size: 0.85rem;
+	text-align: center;
+	overflow: hidden;
+}
+NAV TABLE {
+	width: 100%;
+}
+NAV INPUT {
+	width: 100%;
+}
+NAV SELECT {
+	width: 100%;
+}
+
+TABLE.tag_list {
+	border-collapse: collapse;
+}
+TABLE.tag_list>THEAD {
+	display: none;
+}
+TABLE.tag_list>TBODY>TR>TD {
+	display: inline;
+	padding: 0;
+}
+TABLE.tag_list>TBODY>TR>TD:after {
+	content: " ";
+}
+
+.more:after {
+	content: " >>>";
+}
+
+.tag_count:before {
+	content: "(";
+}
+.tag_count:after {
+	content: ")";
+}
+
+#paginator {
+	box-shadow: none;
+}
+#paginator .blockbody {
+	background: none;
+	border: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*                 the main part of each page                     *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ARTICLE {
+	grid-column: 2;
+	grid-row: 2;
+	text-align: center;
+	height: 1%;
+}
+ARTICLE TABLE {
+	width: 90%;
+	margin: auto;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*                       mobile screens                           *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media screen and (width <= 800px) {
+	BODY.layout-grid {
+		grid-template-columns: auto;
+	}
+	HEADER {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	ARTICLE {
+		grid-column: 1;
+		grid-row: 2;
+		margin-right: 0;
+	}
+	NAV {
+		grid-column: 1;
+		grid-row: 3;
+		margin: auto;
+	}
+	FOOTER {
+		grid-column: 1;
+		grid-row: 4;
+	}
+	#image-list .blockbody {
+		margin: 0;
+	}
+	.shm-image-list {
+		justify-content: center;
+	}
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*                     specific page types                        *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#short-wiki-description > .blockbody {
+	padding-bottom: 15px;
+}
+#short-wiki-description h2 {
+	margin: 0 0 0.4em;
+}
+
+#pagelist {
+	margin-top: 32px;
+}
+
+.comment {
+	padding: var(--block-padding);
+	border-bottom: 1px solid var(--block-border);
+}
+.comment:first-child {
+	padding-top: 0;
+}
+.comment:last-child {
+	border-bottom: none;
+}
+.thumb IMG {
+	border: 1px solid var(--block-border);
+	background: var(--block);
+	padding: var(--block-padding);
+	border-radius: var(--border-radius);
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* example of how to apply specific styles to specific thumbs for specific userclasses */
+/*
+BODY[data-userclass="anonymous"] .thumb[data-rating="e"] IMG {
+	filter: blur(5px);
+}
+*/
+
+/*# sourceMappingURL=default.1738537883.150082bc1758bb2f51a4e4edaa4b04f0.css.map */
